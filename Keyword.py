@@ -38,7 +38,6 @@ def MakeAlphabet(word):
 for word in wordBank.split():
     newText = ""
     # word = "loyatz".upper()
-    word = "loyatz".upper()
     modAlphabet = MakeAlphabet(word)
     # print(modAlphabet)
     for char in text:
