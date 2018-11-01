@@ -4,7 +4,7 @@ import string
 text = codecs.open("code.txt", encoding='utf-8').read()
 alphabet = "abcdefghijklmnopqrstuvwxyz".upper()
 modAlphabet = ""
-wordBank = codecs.open("words.txt", encoding='utf-8').read()
+wordBank = codecs.open("words.txt").read()
 wordBank = wordBank.upper()
 printFile = codecs.open("answer.txt", "w", encoding='utf-8')
 text = text.upper()
