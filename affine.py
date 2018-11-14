@@ -14,7 +14,7 @@ for av in range(0, 25):
             newText = Affine(a=av, b=bv).decipher(text, keep_punct=True)
 
             # just the 3 most common words in the english language
-            if "THE" in newText and "BE" in newText and "TO" in newText:
-                printFile.write(newText + "\n" + "\n")
+            # if "THE" in newText and "BE" in newText and "TO" in newText:
+            printFile.write(newText + "\n" + "\n")
         except:
             None

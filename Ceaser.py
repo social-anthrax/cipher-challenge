@@ -17,5 +17,5 @@ for shift in range(0, 25):
         else:
             newText += char
 
-    if "THE" in newText:
-        printFile.write(newText)
+    # if "THE" in newText:
+    printFile.write(newText)

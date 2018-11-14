@@ -39,13 +39,13 @@ for word in wordBank.split():
     newText = ""
     # word = "loyatz".upper()
     modAlphabet = MakeAlphabet(word)
-    # print(modAlphabet)
+    print(modAlphabet)
     for char in text:
         if char in modAlphabet:
 
-            print(char)
+            # print(char)
             loc = (modAlphabet.index(char))
-            print(loc)
+            # print(loc)
             newText += alphabet[loc]
         else:
             newText += char

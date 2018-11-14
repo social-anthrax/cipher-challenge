@@ -5,7 +5,7 @@
 #include <math.h>
 #include "scoreText.h"
 
-#define TEMP 20
+#define TEMP 20000
 #define STEP 0.2
 #define COUNT 10000
 
