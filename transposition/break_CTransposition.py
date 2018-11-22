@@ -21,7 +21,8 @@ maxscore = -99e9
 for columnNum in range(4, 15, 1):
     print "column length is now " + str(columnNum)
     maxkey = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-    parentscore, parentkey = maxscore, maxkey[:columnNum]
+    parentscore, parentkey = maxscore, maxkey[:]
+    random.shuffle(parentkey)
     # keep going until we are killed by the user
     i = 0
     for x in range(0, factorial(columnNum)):
@@ -33,9 +34,10 @@ for columnNum in range(4, 15, 1):
         while count < (2 ^ columnNum):
             a = random.randint(0, columnNum - 1)
             b = random.randint(0, columnNum - 1)
-            child = parentkey[:columnNum]
+            child = parentkey[:]
             # swap two characters in the child
-            child[a], child[b] = child[b], child[a]
+            child[a], child[b] = maxkey[b], maxkey[a]
+            child = child[:columnNum]
             deciphered = SimpleSub(''.join(child)).decipher(ctext)
             score = fitness.score(deciphered)
             # if the child was better, replace the parent with it
