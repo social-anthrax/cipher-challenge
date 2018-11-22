@@ -4,7 +4,7 @@ import math
 from pycipher import Affine  # gets the affine cipher system
 # reads and parses file
 text = codecs.open("code.txt", encoding='utf-8').read()
-printFile = codecs.open("code2.txt", "w", encoding='utf-8')
+printFile = codecs.open("answer.txt", mode="w", encoding='utf-8')
 text = text.upper()
 newText = ""
 i = 0
