@@ -4,7 +4,7 @@ import math
 from pycipher import Affine  # gets the affine cipher system
 # reads and parses file
 text = codecs.open("code.txt", encoding='utf-8').read()
-printFile = codecs.open("answer.txt", "w", encoding='utf-8')
+printFile = codecs.open("code2.txt", "w", encoding='utf-8')
 text = text.upper()
 newText = ""
 i = 0
@@ -15,8 +15,12 @@ def splitter(n, s):
     return (" ".join(pieces[i:i + n]) for i in xrange(0, len(pieces), n))
 
 
-for x in range(0, int(math.ceil(len(text) / 5))):
+quintiplets = []
 
-    newText += text[(i * 5) + 1:((i + 1) * 5) + 1]
-    i += 1
+
+quintiplets = text.split(' ')
+for i in range(0, len(quintiplets) / 14):
+    for columnNum in range(0, 14):
+        newText += quintiplets[columnNum * 14 + i] + " "
 print(newText)
+printFile.write(newText)
