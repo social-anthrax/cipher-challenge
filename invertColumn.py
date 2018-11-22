@@ -8,6 +8,7 @@ printFile = codecs.open("code2.txt", "w", encoding='utf-8')
 text = text.upper()
 newText = ""
 i = 0
+totalColumns = 14
 
 
 def splitter(n, s):
@@ -19,8 +20,9 @@ quintiplets = []
 
 
 quintiplets = text.split(' ')
-for i in range(0, len(quintiplets) / 14):
-    for columnNum in range(0, 14):
-        newText += quintiplets[columnNum * 14 + i] + " "
+for i in range(0, len(quintiplets) / totalColumns):
+    for columnNum in range(0, totalColumns):
+        # splits up the string into sets of totalColumns amd then finds the number above totalColumns and gets that coulymn row thing. I just wrote this and i dont know how it works.
+        newText += quintiplets[columnNum * totalColumns + i] + " "
 print(newText)
 printFile.write(newText)
