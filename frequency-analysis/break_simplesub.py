@@ -46,7 +46,8 @@ while 1:
         print '    best key: ' + ''.join(maxkey)
         print '    plaintext: ' + ss.decipher(ctext)
 
-        printtext = "\nbest score so far:" + maxscore + "on iteration" + i
+        printtext = "\nbest score so far:" + \
+            str(maxscore) + "on iteration" + str(i)
         printFile.write(printtext)
         printtext = '    best key: ' + ''.join(maxkey)
         printFile.write(printtext)
