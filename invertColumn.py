@@ -20,9 +20,12 @@ quintiplets = []
 
 
 quintiplets = text.split(' ')
-for i in range(0, len(quintiplets) / totalColumns):
-    for columnNum in range(0, totalColumns):
+# print(quintiplets)
+for i in range(0, totalColumns):  # len(quintiplets) / totalColumns)
+    for columnNum in range(0,  len(quintiplets) / totalColumns):
+
         # splits up the string into sets of totalColumns amd then finds the number above totalColumns and gets that coulymn row thing. I just wrote this and i dont know how it works.
         newText += quintiplets[columnNum * totalColumns + i] + " "
+    # newText += "\n"
 print(newText)
 printFile.write(newText)
